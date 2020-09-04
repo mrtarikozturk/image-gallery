@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+div.gallery {
+  /* float: left; */
+  /* width: 25%; */
+  border: 1px solid rgba(168, 133, 133, 0.2);
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: italic;
+  font-weight: bold;
+  color: maroon;
+  font-size: larger;
+}
+
+div.gallery:hover {
+  border: 1px solid black;
+}
+
+.container {
+  /* this is created for responsive page */
+  width: 25%;
+  float: left;
+  padding: 0px 6px;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.text {
+  margin: 10px;
+  text-align: justify;
+  text-indent: 30px;
+}
+
+@media only screen and (max-width: 700px) {
+  .container {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+    width: 100%;
+  }
+}
+/* Resimleri float:left yaptigimiz icin sonrasinda gelen div'in icindeki yazilar resimlere yaslanmis duruma geldi. Cunku resimler float oldugu icin bir katman olustu ve alt katmanda kapladiklari yer bosalmis oldu. Text'in bulundugu div ise buraya girmis oldu. Bu nedenle de bu divin icerigi resimlere yapisti. Bunu asmak icin ise son resim divi ile yazi divi arasina bos bir div ekledik ve bu div icin clearfix css ozelligini verdik. Boylece text'in bulundugu div ile resimlerin bulundugu divler cakismamis oldu. */
